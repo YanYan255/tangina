@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      font-family: "Poppins", sans-serif;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+    }
+
+    .icon {
+      /* Initial icon size */
+      font-size: 2em;
+      /* Initial icon color */
+      color: #7a7a7a;
+      /* Transition for smooth hover effect */
+      transition: all 0.3s ease;
+    }
+
+    /* Enlarge icon on hover */
+    .social:hover .icon {
+      font-size: 2.5em;
+    }
+
+    /* Change color of specific icons on hover */
+    .gmail:hover {
+      color: #23c8c8;
+    }
+
+    .facebook:hover {
+      color: #4267B2;
+    }
+
+    .instagram:hover {
+      color: rgb(241, 102, 217);
+    }
+
+    .linkedin:hover {
+      color: #0e76a8;
+    }
+
+    .reddit:hover {
+      color: #ff4500;
+    }
+
+    .tiktok:hover {
+      color: #ff0050;
+    }
+
+    .youtube:hover {
+      color: #FF0000;
+    }
+
+    .pinterest:hover {
+      color: #c8232c;
+    }
+
+    .telegram:hover {
+      color: #2AABEE;
+    }
+
+    .messenger:hover {
+      color: #00BFFF;
+    }
+
+    /* Center icon name */
+    .icon-name {
+      text-align: center;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .icon-name {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .social:hover .icon-name {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Start Google Classroom Icon -->
+    <div id="googleclassroom" onclick="navigate('https://classroom.google.com/h')" class="social">
+      <span class="icon googleclassroom"><img src="https://ssl.gstatic.com/classroom/favicon_2020_v2_48dp.png" alt="Google Classroom Logo" width="40"></span>
+      <span class="icon-name">Google Classroom</span>
+    </div>
+    <!-- End Google Classroom Icon -->
+
+    <!-- Start Canva Icon -->
+    <div id="canva" onclick="openApplication('canva')" class="social">
+      <span class="icon canva"><img src="https://about.canva.com/wp-content/uploads/sites/3/2016/08/canva-logo.png" alt="Canva Logo" width="40"></span>
+      <span class="icon-name">Canva</span>
+    </div>
+    <!-- End Canva Icon -->
+
+    <!-- Start Google Sheets Icon -->
+    <div id="googlesheets" onclick="navigate('https://docs.google.com/spreadsheets/d/1DTT2gqJIxGJBoMMlHUOcSZmjZT75huIRvqeMWTjxnwM/edit#gid=0')" class="social">
+      <span class="icon googlesheets"><i class="fas fa-table"></i></span>
+      <span class="icon-name">Google Sheets</span>
+    </div>
+    <!-- End Google Sheets Icon -->
+
+  </div>
+
+  <script>
+    function navigate(url) {
+      window.open(url, '_blank').focus();
+    }
+
+    function openApplication(app) {
+      if (app === 'canva') {
+        // Replace this with code to open the Canva application on your laptop
+        alert("Opening Canva application...");
+      } else if (app === 'discord') {
+        // Replace this with code to open the Discord application on your laptop
+        alert("Opening Discord application...");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
